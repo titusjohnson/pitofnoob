@@ -1,4 +1,6 @@
 <?php
+include(dirname(__FILE__)."/config.php");
+
 /**
  * Initialize Flourish's Template object and set up our basic templates
  */

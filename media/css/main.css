@@ -93,7 +93,19 @@ textarea {
    Author's custom styles
    ========================================================================== */
 
-
+html, body, .middles {
+	height: 100%;
+	width: 100%;
+	display: table;
+}
+.middles {
+	display: table-cell;
+	vertical-align: middle;
+}
+.placeholder {
+	margin: 0 auto;
+	display: block;
+}
 
 
 
