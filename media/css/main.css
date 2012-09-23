@@ -92,21 +92,16 @@ textarea {
 /* ==========================================================================
    Author's custom styles
    ========================================================================== */
-
-html, body, .middles {
-	height: 100%;
-	width: 100%;
-	display: table;
-}
-.middles {
-	display: table-cell;
-	vertical-align: middle;
-}
-.placeholder {
-	margin: 0 auto;
-	display: block;
+.admin-nav {
+	position: absolute;
+	top: 0;
+	right: 0;
 }
 
+.header {
+	float: left;
+	margin-right: 10px;
+}
 
 
 

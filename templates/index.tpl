@@ -1,3 +1,13 @@
-<div class="middles">
-	<img class="placeholder" src="/media/images/newb1.gif" alt="You sir, are a newbie!" />
-</div>
+<? $posts = $this->get("posts"); ?>
+
+<?if(count($posts) > 0):?>
+	<?foreach($posts as $post):?>
+		<div class="post-row">
+			<h5><?=$post->prepareTitle()?></h5>
+			<p><?=$post->prepareDateAuthored("m/d/j h:m")?> by <?=$post->prepareAuthor()?></p>
+			<p><?=post_snippet($post->prepareBody());?></p>
+		</div>
+	<?endforeach;?>
+<?else:?>
+	<p>Sorry! No posts available.</p>
+<?endif;;?>

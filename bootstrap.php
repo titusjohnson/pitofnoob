@@ -1,5 +1,6 @@
 <?php
 include(dirname(__FILE__)."/config.php");
+include(dirname(__FILE__)."/libraries/functions.php");
 
 /**
  * Initialize Flourish's Template object and set up our basic templates
@@ -8,7 +9,20 @@ $tpl = new fTemplating($_SERVER["DOCUMENT_ROOT"]."/templates/");
 $tpl->set("header", "header.tpl");
 $tpl->set("footer", "footer.tpl");
 $tpl->set("main", "main.tpl");
+$tpl->buffer();
 
+/**
+ * Basic auth levels
+ */
+fAuthorization::setLoginPage("/admin/");
+fAuthorization::setAuthLevels(array("admin" => 100));
+
+/**
+ * Set a global database access variable.
+ * Attach the database to our ORM.
+ */
+$db = new fDatabase("mysql", DB_NAME, DB_USER, DB_PASS, DB_HOST);
+fORMDatabase::attach($db);
 
 
 /**

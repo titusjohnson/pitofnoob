@@ -2,7 +2,8 @@
 include(dirname(__FILE__)."/bootstrap.php");
 
 Toro::serve(array(
-	"/" => "IndexController"
+	"/" => "IndexController",
+	"/posts/:alpha" => "AllPosts",
 ));
 
 // Final act is to place the final template
