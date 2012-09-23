@@ -5,7 +5,7 @@
 		<div class="post-row">
 			<h5><?=$post->prepareTitle()?></h5>
 			<p><?=$post->prepareDateAuthored("m/d/j h:m")?> by <?=$post->prepareAuthor()?></p>
-			<p><?=post_snippet($post->prepareBody());?></p>
+			<p><?=substr($post->prepareBody(), 0, 300);?></p>
 		</div>
 	<?endforeach;?>
 <?else:?>
