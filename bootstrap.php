@@ -1,6 +1,7 @@
 <?php
 include(dirname(__FILE__)."/config.php");
 include(dirname(__FILE__)."/libraries/functions.php");
+include(dirname(__FILE__)."/libraries/markdown/markdown.php");
 
 /**
  * Initialize Flourish's Template object and set up our basic templates

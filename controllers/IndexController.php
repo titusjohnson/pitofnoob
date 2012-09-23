@@ -4,13 +4,12 @@ class IndexController {
 		global $tpl;
 
 		try {
-			$posts = fRecordSet::build("post", array("active=" => 1));
-			if($posts->count() === 0) {
-				throw new fNoRowsException("No posts found, sorry!");
-			}
-			$tpl->set("posts", $posts);
+			$post = Post::Latest(1);
+			$tpl->set("post", $post);
 		}
-		catch(fNoRowsException $e) {}
+		catch(fNoRowsException $e) {
+			fMessaging::create("error", "No post ready, sorry!");
+		}
 
 		$tpl->set("page_content", "index.tpl");
 	}

@@ -30,13 +30,15 @@
 
     <?if(admin()):?>
 		<ul class="admin-nav">
-			<li><a href="<?=ToroLink::path("IndexController")?>">Home Page</a></li>
-			<li><a href="<?=ToroLink::path("AllPosts")?>"></a></li>
-			<li><a href=""></a></li>
 			<li><a href=""></a></li>
 		</ul>
     <?endif;?>
 
 	<div class="header">
 		<img class="logo" src="/media/images/newb1.gif" alt="You sir, are a newbie!" />
+
+		<ul class="nav">
+			<li><a href="<?=ToroLink::path("IndexController")?>">Home</a></li>
+			<li><a href="<?=ToroLink::path("ArchiveController")?>">Archive</a></li>
+		</ul>
 	</div>
